@@ -1,0 +1,84 @@
+
+.search-bar {
+    height: 4rem;
+    width: 4rem;
+    right: 0.25rem;
+    position: relative;
+    border-radius: 2rem;
+    background: $c-3;
+
+    box-sizing: border-box;
+    background-clip: padding-box;
+    /* !importanté */
+    border: solid 1px transparent;
+    // -------------
+    transition: width .3s;
+
+    &.is-open {
+        input {
+            height: calc(4rem - 2px);
+            width: calc(100% - 4rem);
+            text-indent: 3rem;
+            opacity: 1;
+        }
+    }
+
+    input {
+        transition: width .3s, opacity .3s .3s;
+        width: 0;
+        opacity: 0;
+        outline: none;
+
+    }
+
+    /* !importanté */
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        margin: -1px;
+        /* !importanté */
+        border-radius: inherit;
+        /* !importanté */
+        background: linear-gradient(to right, red, orange);
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#c036d0+0,cf167f+50,ffbf99+100 */
+        background: rgb(192, 54, 208);
+        /* Old browsers */
+        background: -moz-linear-gradient(top, rgba(192, 54, 208, 1) 0%, rgba(207, 22, 127, 1) 50%, rgba(255, 191, 153, 1) 100%);
+        /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, rgba(192, 54, 208, 1) 0%, rgba(207, 22, 127, 1) 50%, rgba(255, 191, 153, 1) 100%);
+        /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, rgba(192, 54, 208, 1) 0%, rgba(207, 22, 127, 1) 50%, rgba(255, 191, 153, 1) 100%);
+        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#c036d0', endColorstr='#ffbf99', GradientType=0);
+        /* IE6-9 */
+    }
+
+    &.is-open {
+        width: calc(100% + 4rem)
+    }
+}
+
+.album {
+    // height: 50px;
+    // width: 50px;
+    background-image: url(../img/album/album_bg.png);
+    background-repeat: no-repeat;
+    background-position: 100% 50%;
+
+    &__body {
+        height: 139px;
+    }
+
+    &__cover {}
+
+    &__title {}
+
+    &__ep {
+        color: #fff;
+    }
+}

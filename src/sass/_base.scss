@@ -1,0 +1,26 @@
+
+html {
+    font-size: 10px;
+}
+
+body {
+    background: $c-3;
+    box-sizing: border-box;
+    background-image: url("../img/logoOverlay.png");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: right top;
+    color: #fff;
+    height: 100vh;
+    /* Fallback for browsers that do not support Custom Properties */
+    height: calc(var(--vh, 1vh) * 100);
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+header {
+    padding-top: 5rem;
+}
+.container {
+    padding-right: 2.8rem;
+    padding-left: 2.8rem;
+}

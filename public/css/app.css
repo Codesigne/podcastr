@@ -1,0 +1,487 @@
+@charset "UTF-8";
+.icon {
+  min-height: 2rem;
+  min-width: 2rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+}
+.icon--tracklist-btn {
+  height: 4.1rem;
+  width: 4.1rem;
+  background-image: url("../img/tracklistIcon.png");
+}
+.icon--tracklist-btn.is-active {
+  background-image: url("../img/closeButton.png");
+}
+.icon--queue-btn {
+  transform: translateX(-50%);
+  bottom: 1.2rem;
+  height: 3rem;
+  width: 9.3rem;
+  background-image: url("../img/queue.png");
+}
+.icon--queue-close-btn {
+  transform: translateX(-50%);
+  bottom: 1.2rem;
+  height: 3rem;
+  width: 3rem;
+  font-size: 1.2rem;
+  line-height: 3rem;
+  border-radius: 1.5rem;
+  color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.icon--more {
+  background-image: url("../img/moreIcon.png");
+}
+.icon--list-queue {
+  height: 6rem;
+  width: 6rem;
+  background-image: url("../img/list-queue.png");
+}
+.icon--search {
+  height: 100%;
+  width: calc(4rem - 2px);
+  background-image: url("../img/search.png");
+}
+.icon--grid {
+  background-image: url("../img/combinedShape2.png");
+}
+.icon--headphone {
+  background-image: url("../img/podcasts.png");
+}
+.icon--download {
+  background-image: url("../img/artists.png");
+}
+.icon--user {
+  background-image: url("../img/artistsCopy.png");
+}
+.icon--disc {
+  height: 2.7rem;
+  min-width: 2.7rem;
+  background-image: url("../img/track_list.png");
+}
+.icon--disc.is-active {
+  background-image: url("../img/track_list_active.png");
+}
+.icon--shuffle {
+  background-image: url("../img/control/shuffle.png");
+}
+.icon--prev {
+  width: 2.8rem;
+  background-image: url("../img/control/fastForward.png");
+  transform: scale(-1, 1);
+}
+.icon--pause {
+  height: 7rem;
+  width: 7rem;
+  background-image: url("../img/control/pause.png");
+}
+.icon--fast-forward {
+  width: 2.8rem;
+  background-image: url("../img/control/fastForward.png");
+}
+.icon--repeat {
+  background-image: url("../img/control/repeat.png");
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  background: #2c2838;
+  box-sizing: border-box;
+  background-image: url("../img/logoOverlay.png");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: right top;
+  color: #fff;
+  height: 100vh;
+  /* Fallback for browsers that do not support Custom Properties */
+  height: calc(var(--vh, 1vh) * 100);
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+}
+
+header {
+  padding-top: 5rem;
+}
+
+.container {
+  padding-right: 2.8rem;
+  padding-left: 2.8rem;
+}
+
+.list--track__item {
+  font-size: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+.list--track__item i {
+  margin-right: 1.2rem;
+}
+.list--queue__item {
+  margin-bottom: 2.5rem;
+}
+.list--queue .ttl-1 {
+  font-size: 1.4rem;
+}
+.list--queue .ttl-2,
+.list--queue .time {
+  font-size: 1.2rem;
+  color: rgba(230, 230, 230, 0.4);
+}
+.list--queue__desc {
+  width: calc(100% - 10rem);
+  margin-left: 1.8rem;
+}
+
+.header--1 {
+  top: 0;
+  width: 100px;
+  z-index: 1;
+  height: 101px;
+  padding-left: 3rem;
+}
+
+.l-coverimg {
+  height: 71.3rem;
+  position: relative;
+}
+.l-coverimg:before {
+  width: 100%;
+  position: absolute;
+  content: " ";
+  height: 100%;
+  background-color: #2c2838;
+}
+.l-coverimg:after {
+  width: 100%;
+  position: absolute;
+  content: " ";
+  height: 50%;
+  bottom: -1px;
+  transform: scale(-1);
+  background: -moz-linear-gradient(top, #2c2939 0%, rgba(44, 41, 57, 0) 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #2c2939 0%, rgba(44, 41, 57, 0) 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #2c2939 0%, rgba(44, 41, 57, 0) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2c2939", endColorstr="#002c2939", GradientType=0);
+}
+.l-coverimg img {
+  object-fit: cover;
+  height: inherit;
+  width: inherit;
+}
+
+.seekbar--container .time {
+  font-size: 1.2rem;
+}
+.now-playing {
+  font-size: 1.2rem;
+  height: 3rem;
+  line-height: 3rem;
+  background-color: rgba(44, 40, 56, 0.57);
+  padding-left: 4rem;
+  padding-right: 2rem;
+  margin-bottom: 1.2rem;
+  color: #50e3c2;
+}
+
+.up-next {
+  font-size: 1.4rem;
+  color: #9b9b9b;
+  padding-bottom: 1.5rem;
+}
+
+.current-track .ttl-1 {
+  font-size: 1.8rem;
+}
+.current-track .ttl-2 {
+  font-size: 1.4rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.l-track-list {
+  top: calc(100% - 34.8rem);
+  height: 7rem;
+  overflow: hidden;
+}
+.l-track-list.is-open {
+  height: 100%;
+  top: calc(81.7rem - 69.3rem);
+}
+
+.seekbar {
+  height: 1rem;
+}
+.seekbar--container {
+  height: 4rem;
+}
+
+.l-queue-list {
+  top: calc(100% - 17rem);
+  background: #2c2838;
+}
+
+.l-controles {
+  top: calc(100% - 31.3rem);
+}
+
+.is-open {
+  transition: top 0.3s cubic-bezier(0.4, 0, 1, 1), height 0.2s cubic-bezier(0.4, 0, 1, 1) 0.1s;
+}
+
+.is-close {
+  transition: top 0.2s cubic-bezier(0, 0, 0.2, 1) 0.1s, height 0.3s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.text--grad {
+  background: -moz-linear-gradient(left, white 0%, white 63%, rgba(255, 255, 255, 0) 100%);
+  background: -webkit-linear-gradient(left, white 0%, white 63%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(to right, white 0%, white 63%, rgba(255, 255, 255, 0) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff", endColorstr="#00ffffff", GradientType=1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.seekbar-negative {
+  background: #bf36ff;
+  background: -moz-linear-gradient(left, #bf36ff 0%, #e33c79 50%, #ffbe99 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, #bf36ff), color-stop(50%, #e33c79), color-stop(100%, #ffbe99));
+  background: -webkit-linear-gradient(left, #bf36ff 0%, #e33c79 50%, #ffbe99 100%);
+  background: -o-linear-gradient(left, #bf36ff 0%, #e33c79 50%, #ffbe99 100%);
+  background: -ms-linear-gradient(left, #bf36ff 0%, #e33c79 50%, #ffbe99 100%);
+  background: linear-gradient(to right, #bf36ff 0%, #e33c79 50%, #ffbe99 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#bf36ff", endColorstr="#ffbe99", GradientType=1);
+}
+
+.search-bar {
+  height: 4rem;
+  width: 4rem;
+  right: 0.25rem;
+  position: relative;
+  border-radius: 2rem;
+  background: #2c2838;
+  box-sizing: border-box;
+  background-clip: padding-box;
+  /* !importanté */
+  border: solid 1px transparent;
+  transition: width 0.3s;
+  /* !importanté */
+}
+.search-bar.is-open input {
+  height: calc(4rem - 2px);
+  width: calc(100% - 4rem);
+  text-indent: 3rem;
+  opacity: 1;
+}
+.search-bar input {
+  transition: width 0.3s, opacity 0.3s 0.3s;
+  width: 0;
+  opacity: 0;
+  outline: none;
+}
+.search-bar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  margin: -1px;
+  /* !importanté */
+  border-radius: inherit;
+  /* !importanté */
+  background: linear-gradient(to right, red, orange);
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#c036d0+0,cf167f+50,ffbf99+100 */
+  background: #c036d0;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #c036d0 0%, #cf167f 50%, #ffbf99 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #c036d0 0%, #cf167f 50%, #ffbf99 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #c036d0 0%, #cf167f 50%, #ffbf99 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#c036d0", endColorstr="#ffbf99", GradientType=0);
+  /* IE6-9 */
+}
+.search-bar.is-open {
+  width: calc(100% + 4rem);
+}
+
+.album {
+  background-image: url(../img/album/album_bg.png);
+  background-repeat: no-repeat;
+  background-position: 100% 50%;
+}
+.album__body {
+  height: 139px;
+}
+.album__ep {
+  color: #fff;
+}
+
+.j-track-list--is-open .j-coverimg::before {
+  transition: all 0.3s cubic-bezier(0.4, 0, 1, 1);
+  opacity: 0.8;
+}
+.j-track-list--is-close .j-coverimg::before {
+  transition: all 0.3s cubic-bezier(0, 0, 0.2, 1);
+  opacity: 0;
+}
+
+.j-track-list--is-open .j-track-list .ttl-1 {
+  transition: all 0.3s cubic-bezier(0.4, 0, 1, 1);
+  background: #fff;
+  -webkit-background-clip: text;
+}
+.j-track-list--is-close .j-track-list .ttl-1 {
+  transition: all 0.3s cubic-bezier(0, 0, 0.2, 1);
+  background: -moz-linear-gradient(left, white 0%, white 63%, rgba(255, 255, 255, 0) 100%);
+  background: -webkit-linear-gradient(left, white 0%, white 63%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(to right, white 0%, white 63%, rgba(255, 255, 255, 0) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff", endColorstr="#00ffffff", GradientType=1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.j-queue-list--is-open .j-coverimg::before {
+  transition: all 0.3s cubic-bezier(0.4, 0, 1, 1);
+  opacity: 0;
+}
+.j-queue-list--is-close .j-coverimg::before {
+  transition: all 0.3s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.j-queue-list--is-open .j-track-list {
+  transition: all 0.3s cubic-bezier(0.4, 0, 1, 1);
+  top: calc(100% - (81.2rem - 22rem));
+}
+
+.j-queue-list--is-open .j-controles {
+  transition: all 0.3s cubic-bezier(0.4, 0, 1, 1);
+  top: calc(100% - (81.2rem - 22rem));
+}
+.j-queue-list--is-close .j-controles {
+  transition: all 0.3s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.j-queue-list--is-open .j-coverimg {
+  transition: all 0.3s cubic-bezier(0.4, 0, 1, 1);
+  width: 100%;
+  height: calc(26rem);
+}
+.j-queue-list--is-close .j-coverimg {
+  transition: all 0.3s cubic-bezier(0, 0, 0.2, 1);
+  height: calc(100vh - 27.3rem);
+  width: 100%;
+}
+
+.j-queue-list--is-open .j-track-list {
+  transition: all 0.3s cubic-bezier(0.4, 0, 1, 1);
+  height: 4rem;
+}
+.j-queue-list--is-close .j-track-list {
+  transition: all 0.3s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.j-queue-list--is-open .j-queue-list {
+  transition: all 0.3s cubic-bezier(0.4, 0, 1, 1);
+  top: calc(100% - (81.2rem - 38rem));
+}
+.j-queue-list--is-close .j-queue-list {
+  height: 7rem;
+  top: 100%;
+  transition: all 0.3s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.j-queue-list--is-open .controles {
+  transition: all 0.3s cubic-bezier(0.4, 0, 1, 1);
+  opacity: 0;
+  transform: scaleX(0);
+}
+.j-queue-list--is-close .controles {
+  transition: all 0.3s cubic-bezier(0, 0, 0.2, 1);
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+.j-queue-list--is-open .now-playing {
+  transition: all 0.3s cubic-bezier(0.4, 0, 1, 1);
+  margin-left: 2rem;
+  padding-left: 2rem;
+  border-radius: 15.5rem;
+}
+.j-queue-list--is-close .now-playing {
+  transition: all 0.3s cubic-bezier(0, 0, 0.2, 1);
+  border-radius: 0 15.5rem 15.5rem 0;
+}
+
+.j-queue-list--is-open .seekbar--container {
+  transition: all 0.3s cubic-bezier(0.4, 0, 1, 1);
+  margin-top: 1rem;
+}
+.j-queue-list--is-close .seekbar--container {
+  transition: all 0.3s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.j-queue-list--is-open .current-track .icon--list-queue {
+  transition: all 0.3s cubic-bezier(0.4, 0, 1, 1);
+  transform: translateX(0);
+  transition-delay: 0.2s;
+}
+.j-queue-list--is-close .current-track .icon--list-queue {
+  transition: all 0.3s cubic-bezier(0, 0, 0.2, 1);
+  transform: translateX(10rem);
+}
+.j-queue-list--is-open .current-track .icon--more {
+  transition: all 0.3s cubic-bezier(0.4, 0, 1, 1);
+  transform: translateX(15rem);
+}
+.j-queue-list--is-close .current-track .icon--more {
+  transition: all 0.3s cubic-bezier(0, 0, 0.2, 1);
+  transition-delay: 0.2s;
+  transform: translateX(5rem);
+}
+
+.j-queue-list--is-open .j-tracklist-btn {
+  transition: all 0.3s cubic-bezier(0.4, 0, 1, 1);
+  transform: translateX(15rem);
+}
+.j-queue-list--is-close .j-tracklist-btn {
+  transition: all 0.3s cubic-bezier(0, 0, 0.2, 1);
+  transform: translateX(0rem);
+}
+
+.j-queue-list--is-open .icon--queue-btn {
+  transition: all 0.3s cubic-bezier(0.4, 0, 1, 1);
+  bottom: -7rem;
+}
+.j-queue-list--is-close .icon--queue-btn {
+  transition: all 0.3s cubic-bezier(0, 0, 0.2, 1);
+  bottom: 1rem;
+}
+
+.j-queue-list--is-open .icon--queue-close-btn {
+  transition: all 0.3s cubic-bezier(0.4, 0, 1, 1);
+  bottom: 1rem;
+}
+.j-queue-list--is-close .icon--queue-close-btn {
+  transition: all 0.3s cubic-bezier(0, 0, 0.2, 1);
+  bottom: -7rem;
+}
+
+.semi-bold {
+  font-weight: 600;
+}
+
+.bg-c-3 {
+  background-color: #2c2838;
+}
+
+/*# sourceMappingURL=app.css.map */

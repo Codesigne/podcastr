@@ -1,0 +1,119 @@
+.icon {
+    min-height: 2rem;
+    min-width: 2rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+
+    &--tracklist-btn {
+        height: 4.1rem;
+        width: 4.1rem;
+        background-image: url("../img/tracklistIcon.png");
+
+        &.is-active {
+            background-image: url("../img/closeButton.png");
+        }
+    }
+
+    &--queue-btn {
+        transform: translateX(-50%);
+        bottom: 1.2rem;
+        height: 3rem;
+        width: 9.3rem;
+        // font-size: 1.2rem;
+        // border-radius: 1.5rem;
+        // background-color: $c-1;
+        background-image: url("../img/queue.png");
+    }
+
+    &--queue-close-btn {
+        transform: translateX(-50%);
+        bottom: 1.2rem;
+        height: 3rem;
+        width: 3rem;
+        font-size: 1.2rem;
+        line-height: 3rem;
+        border-radius: 1.5rem;
+        color: transparentize(#fff, .4);
+        background-color: transparentize(#fff, .9);
+        // background-image: url("../img/queue.png");
+    }
+
+    &--more {
+        background-image: url("../img/moreIcon.png");
+    }
+
+    &--list-queue {
+        height: 6rem;
+        width: 6rem;
+        // margin-right: 1.8rem;
+        background-image: url("../img/list-queue.png");
+    }
+
+    &--search {
+        height: 100%;
+        width: calc(4rem - 2px);
+        background-image: url("../img/search.png");
+    }
+
+    &--grid {
+        background-image: url("../img/combinedShape2.png");
+    }
+
+    &--headphone {
+        background-image: url("../img/podcasts.png");
+    }
+
+    &--download {
+        background-image: url("../img/artists.png");
+    }
+
+    &--user {
+        background-image: url("../img/artistsCopy.png");
+    }
+
+    &--add {}
+
+    &--added {}
+
+    &--disc {
+        height: 2.7rem;
+        min-width: 2.7rem;
+        background-image: url("../img/track_list.png");
+
+        &.is-active {
+            background-image: url("../img/track_list_active.png");
+        }
+    }
+
+    // player----------------------------------
+    &--shuffle {
+        background-image: url("../img/control/shuffle.png");
+    }
+
+    &--prev {
+        width: 2.8rem;
+        background-image: url("../img/control/fastForward.png");
+        transform: scale(-1, 1);
+    }
+
+    &--play {
+        // background-image: url("../img/control/shuffle.png");
+    }
+
+    &--pause {
+        height: 7rem;
+        width: 7rem;
+        background-image: url("../img/control/pause.png");
+    }
+
+    &--fast-forward {
+        width: 2.8rem;
+        background-image: url("../img/control/fastForward.png");
+    }
+
+    &--repeat {
+        background-image: url("../img/control/repeat.png");
+    }
+
+}
