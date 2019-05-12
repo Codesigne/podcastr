@@ -18,10 +18,6 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-header {
-  padding-top: 5rem;
-}
-
 .container {
   padding-right: 2.8rem;
   padding-left: 2.8rem;
@@ -225,7 +221,7 @@ header {
   width: 100px;
   z-index: 1;
   height: 101px;
-  padding-left: 3rem;
+  padding-top: 5rem;
 }
 
 .l-coverimg {
@@ -345,7 +341,10 @@ header {
   transition: width 0.3s;
   /* !importanté */
 }
-.search-bar.is-open input {
+.is-open .search-bar {
+  width: calc(100% + 4rem);
+}
+.is-open .search-bar input {
   height: calc(4rem - 2px);
   width: calc(100% - 4rem);
   text-indent: 3rem;
@@ -370,9 +369,6 @@ header {
   border-radius: inherit;
   /* !importanté */
 }
-.search-bar.is-open {
-  width: calc(100% + 4rem);
-}
 
 .l-albums {
   overflow: scroll;
@@ -380,6 +376,20 @@ header {
 .l-albums > div {
   padding: 0 1.8rem;
   height: 36.7rem;
+}
+
+.l-tags {
+  height: 16.3rem;
+  max-height: 16.3rem;
+  margin-top: 16rem;
+  padding-bottom: 2.5rem;
+}
+.l-tags .ttl {
+  font-size: 2.3rem;
+  font-weight: 800;
+  color: #e6e6e6;
+  line-height: 3.1rem;
+  margin-bottom: 1.5rem;
 }
 
 .j-track-list--is-open .j-coverimg::before {
@@ -530,6 +540,25 @@ header {
 .j-queue-list--is-close .icon--queue-close-btn {
   transition: all 0.3s cubic-bezier(0, 0, 0.2, 1);
   bottom: -7rem;
+}
+
+.j-queue-list--is-open .current-track .icon--list-queue {
+  transition: all 0.3s cubic-bezier(0.4, 0, 1, 1);
+  transform: translateX(0);
+  transition-delay: 0.2s;
+}
+.j-queue-list--is-close .current-track .icon--list-queue {
+  transition: all 0.3s cubic-bezier(0, 0, 0.2, 1);
+  transform: translateX(10rem);
+}
+.j-queue-list--is-open .current-track .icon--more {
+  transition: all 0.3s cubic-bezier(0.4, 0, 1, 1);
+  transform: translateX(15rem);
+}
+.j-queue-list--is-close .current-track .icon--more {
+  transition: all 0.3s cubic-bezier(0, 0, 0.2, 1);
+  transition-delay: 0.2s;
+  transform: translateX(5rem);
 }
 
 .semi-bold {

@@ -12,8 +12,10 @@
     border: solid 1px transparent;
     // -------------
     transition: width .3s;
-
-    &.is-open {
+     .is-open & {
+            width: calc(100% + 4rem)
+        }
+    .is-open & {
         input {
             height: calc(4rem - 2px);
             width: calc(100% - 4rem);
@@ -46,9 +48,7 @@
         @extend %gardient--1;
     }
 
-    &.is-open {
-        width: calc(100% + 4rem)
-    }
+   
 }
 
 
@@ -58,5 +58,18 @@
     >div {
         padding: 0 1.8rem;
         height: 36.7rem
+    }
+}
+.l-tags{
+    height: 16.3rem;
+    max-height: 16.3rem;
+    margin-top: 16rem;
+    padding-bottom: 2.5rem;
+    .ttl{
+        font-size: 2.3rem;
+        font-weight: 800;
+        color: rgb(230, 230, 230);
+        line-height: 3.1rem;
+        margin-bottom: 1.5rem;
     }
 }

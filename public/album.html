@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:400,600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,800" rel="stylesheet">
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap-grid.min.css"> -->
     <link rel="stylesheet" href="css/app.css">
     <title>POD CASTR</title>
@@ -21,25 +21,31 @@
                 <!--  ------------------------------------------------------------------
               Search bar
             ------------------------------------------------------------------   -->
-                <header>
-                    <div class="search-bar float-right">
-                        <input type="text" class="bg-transparent border-0" placeholder="Search for Songs, Artists, Genres">
-                        <i class="icon icon--search float-right j-search "></i>
+                <header class="header--1 position-absolute w-100">
+                    <div class="container">
+                        <img class="position-absolute" src="img/logo/logo.png" alt="">
+                        <div class="search-bar float-right">
+                            <input type="text" class="bg-transparent border-0" placeholder="Search for Songs, Artists, Genres">
+                            <i class="icon icon--search float-right j-search "></i>
+                        </div>
                     </div>
                 </header>
-                <div>
-                    <div class="tag-list d-flex">
-                        <div class="tag tag--is-active d-inline-block semi-bold">EDM</div>
-                        <div class="tag d-inline-block semi-bold">ROCK/RETRO</div>
-                        <div class="tag d-inline-block semi-bold">PROGRESIVE</div>
-                        <div class="tag d-inline-block semi-bold">RNB</div>
-                        <div class="tag d-inline-block semi-bold text--c-2" disabled>+ More</div>
+                <div class="l-tags">
+                    <div class="container">
+                        <div class="ttl">PODCAST</div>
+                        <div class="tag-list d-flex">
+                            <div class="tag tag--is-active d-inline-block semi-bold">EDM</div>
+                            <div class="tag d-inline-block semi-bold">ROCK/RETRO</div>
+                            <div class="tag d-inline-block semi-bold">PROGRESIVE</div>
+                            <div class="tag d-inline-block semi-bold">RNB</div>
+                            <div class="tag d-inline-block semi-bold text--c-2" disabled>+ More</div>
+                        </div>
                     </div>
                 </div>
                 <!--  -----------------------------------------------------------   -->
                 <!--  -->
                 <div class="l-albums">
-                    <div class="d-flex flex-column flex-wrap justify-content-between" >
+                    <div class="d-flex flex-column flex-wrap justify-content-between">
                         <div class="album d-flex flex-column">
                             <div class="album__body d-flex w-100 justify-content-between">
                                 <div class="album__cover">

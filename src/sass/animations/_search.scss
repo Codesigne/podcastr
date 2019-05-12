@@ -1,0 +1,38 @@
+.current-track {
+    .icon--list-queue {
+        .j-queue-list--is-open & {
+            transition: $transition_in;
+            transform: translateX(0);
+            transition-delay: .2s;
+
+
+        }
+
+        .j-queue-list--is-close & {
+            transition: $transition_out;
+
+            transform: translateX(10rem);
+
+        }
+    }
+
+    .icon--more {
+        .j-queue-list--is-open & {
+            transition: $transition_in;
+            // transition-delay: .1s;
+
+
+            transform: translateX(15rem);
+
+        }
+
+        .j-queue-list--is-close & {
+            transition: $transition_out;
+            transition-delay: .2s;
+            transform: translateX(5rem);
+
+        }
+    }
+
+
+}

@@ -1,7 +1,9 @@
 //FOR SEARCH BAR
 $('.j-search').on('click', function(event) {
     event.preventDefault();
-    $('.search-bar').addClass('is-open')
+    console.log("$('.search-bar').parents('header'):", $('.search-bar').parents('header'))
+    $('.search-bar').parents('header').toggleClass('is-open')
+    // $('.search-bar').toggleClass('is-open')
 });
 
 //FOR TRACKLIST
