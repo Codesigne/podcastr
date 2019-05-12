@@ -1,5 +1,6 @@
 .album {
     width: 18.1rem;
+
     &__body {
         height: 13.9rem;
         background-image: url(../img/album/album_bg.png);
@@ -8,13 +9,14 @@
     }
 
     &__footer {
-        padding-right: 3.2rem;
+        padding-right: $kernning * 8;
+        margin-top: $kernning * 2;
     }
 
     &__cover {
         img {
             border-radius: 1rem;
-            box-shadow: 0 .9rem 1rem fade-out(#000, .7);
+            box-shadow: 0 .8rem 1rem fade-out(#000, .7);
         }
     }
 
@@ -22,6 +24,7 @@
         min-height: 3.4rem;
         font-size: 1.2rem;
         color: rgb(230, 230, 230);
+
 
     }
 
@@ -32,13 +35,14 @@
         margin-right: auto;
         font-size: 1.4rem;
         line-height: 1.2rem;
+
         &:after {
             content: "EP";
             position: absolute;
             color: #fff;
             font-size: 1rem;
             line-height: 1.2rem;
-            bottom: 0;
+            bottom: -0.3rem;
             left: 0;
         }
     }

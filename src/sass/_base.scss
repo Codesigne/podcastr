@@ -16,6 +16,22 @@ body {
     height: calc(var(--vh, 1vh) * 100);
     overflow: hidden;
     font-family: 'Poppins', sans-serif;
+
+    &.j-tabs--is-open:after{
+        content: "HCRAES";
+        position: absolute;
+        display: inline-block;
+        overflow: hidden;
+        // top: 0;
+        top: 32rem;
+        z-index: -1;
+        opacity: .05;
+        width: 29.25rem;
+        height: 19.5rem;
+        transform: scaleY(-1);
+        direction: rtl;
+        font-size: 13.9rem;
+    }
 }
 // header {
 //     padding-top: 5rem;

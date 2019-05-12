@@ -26,6 +26,8 @@
         margin-right: $kernning * 1.5;
     }
 
+    color: $c-5;
+
     &--is-active {
         @extend %gardient-border--1;
         // padding-left: $tag-height;

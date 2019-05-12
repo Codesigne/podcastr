@@ -54,9 +54,10 @@
         transition: $transition_out;
         transform: translateX(0) rotate(0);
     }
-    .logo-text{
+
+    .logo-text {
         transition: $transition_out;
-transform: translateX(0);
+        transform: translateX(0);
     }
 
     &.is-open {
@@ -64,9 +65,10 @@ transform: translateX(0);
             transition: $transition_in;
             transform: translateX(-4rem * 3.14) rotate(-360deg);
         }
-        .logo-text{
+
+        .logo-text {
             transition: $transition_in;
-transform: translateX(-4rem * 3.14) ;
+            transform: translateX(-4rem * 3.14);
         }
     }
 }

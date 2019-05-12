@@ -17,6 +17,20 @@ body {
   overflow: hidden;
   font-family: "Poppins", sans-serif;
 }
+body.j-tabs--is-open:after {
+  content: "HCRAES";
+  position: absolute;
+  display: inline-block;
+  overflow: hidden;
+  top: 32rem;
+  z-index: -1;
+  opacity: 0.05;
+  width: 29.25rem;
+  height: 19.5rem;
+  transform: scaleY(-1);
+  direction: rtl;
+  font-size: 13.9rem;
+}
 
 .container {
   padding-right: 2.8rem;
@@ -203,6 +217,7 @@ body {
   padding-left: 2.5957972806rem;
   margin-bottom: 0.8rem;
   border: solid 0.1rem rgba(255, 255, 255, 0.2);
+  color: #9b9b9b;
 }
 .tag:not([disabled]) {
   margin-right: 0.6rem;
@@ -230,10 +245,11 @@ body {
 }
 .album__footer {
   padding-right: 3.2rem;
+  margin-top: 0.8rem;
 }
 .album__cover img {
   border-radius: 1rem;
-  box-shadow: 0 0.9rem 1rem rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0.8rem 1rem rgba(0, 0, 0, 0.3);
 }
 .album__title {
   min-height: 3.4rem;
@@ -254,7 +270,7 @@ body {
   color: #fff;
   font-size: 1rem;
   line-height: 1.2rem;
-  bottom: 0;
+  bottom: -0.3rem;
   left: 0;
 }
 
@@ -396,7 +412,7 @@ body {
 }
 .l-albums > div {
   padding: 0 1.8rem;
-  height: 36.7rem;
+  height: 38.1rem;
 }
 
 .l-tags {
@@ -407,7 +423,7 @@ body {
   padding-bottom: 2.5rem;
 }
 .l-tags .ttl {
-  font-size: 2.3rem;
+  font-size: 2.2rem;
   font-weight: 800;
   color: #e6e6e6;
   line-height: 3.1rem;
@@ -424,6 +440,7 @@ body {
   line-height: 2.5rem;
   margin-bottom: 0.8rem;
   margin-top: 3.2rem;
+  padding-left: 0.6rem;
 }
 
 .j-track-list--is-open .j-coverimg::before {

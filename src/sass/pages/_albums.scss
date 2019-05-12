@@ -1,10 +1,9 @@
-
 .l-albums {
     overflow: scroll;
 
     >div {
         padding: 0 1.8rem;
-        height: 36.7rem
+        height: 38.1rem
     }
 }
 
@@ -16,7 +15,7 @@
     padding-bottom: 2.5rem;
 
     .ttl {
-        font-size: 2.3rem;
+        font-size: 2.2rem;
         font-weight: 800;
         color: rgb(230, 230, 230);
         line-height: 3.1rem;
@@ -27,10 +26,10 @@
 .l-more-tags {
     z-index: 1;
     top: 22.1rem;
-        // opacity: 0;
+    // opacity: 0;
 
     // padding-left: 12.6rem;
-    padding-left:9.8rem;
+    padding-left: 9.8rem;
     // left: -100%;
     //   -webkit-transform: rotateY(-180deg);
     //         transform: rotateY(-180deg);
@@ -40,8 +39,9 @@
     .ttl {
         font-size: 1.8rem;
         line-height: 2.5rem;
-        margin-bottom: $kernning * 2 ;
-        margin-top: $kernning * 8 ;
-  
+        margin-bottom: $kernning * 2;
+        margin-top: $kernning * 8;
+        padding-left: 0.6rem;
+
     }
 }

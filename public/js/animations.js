@@ -10,9 +10,6 @@ function toggleSearch() {
 }
 $('.j-search').on('click', function(event) {
     event.preventDefault();
-    console.log("$('.search-bar').parents('header'):", $('.search-bar').parents('header'))
-    // $('.search-bar').parents('header').toggleClass('is-open')
-    // $('.search-bar').toggleClass('is-open')
     toggleSearch();
 });
 
@@ -74,7 +71,7 @@ $('.j-queue-btn').on('click', function(event) {
 $('.tag-list').on('click', '.tag:not([disabled])', function(event) {
     event.preventDefault();
     /* Act on the event */
-    $(this).toggleClass('tag--is-active semi-bold');
+    $(this).toggleClass('tag--is-active');
 });
 
 $('.j-select-album').on('click', function(event) {
