@@ -1,0 +1,66 @@
+.search-bar {
+    height: 4rem;
+    width: 4rem;
+    right: 0.25rem;
+    position: relative;
+    border-radius: 2rem;
+    background: $c-3;
+    box-sizing: border-box;
+    background-clip: padding-box;
+    /* !importanté */
+    border: solid 1px transparent;
+    // -------------
+    transition: width .3s;
+    // transition: width .3s .2s  ;
+
+
+    /* !importanté */
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        margin: -1px;
+        /* !importanté */
+        border-radius: inherit;
+        /* !importanté */
+        @extend %gardient--1;
+    }
+
+    input {
+        transition: width .3s .2s, opacity .1s;
+        line-height: calc(4rem - 2px);
+        width: 0;
+        opacity: 0;
+        text-indent: 3rem;
+        font-size: 1.4rem;
+        outline: none;
+
+    }
+
+    .is-open & {
+        // transition: width .3s .2s  ;
+
+        width: calc(100% + 4rem)
+    }
+
+    .is-open & {
+        input {
+            transition: width .3s .3s, opacity .3s;
+            // height: calc(4rem - 2px);
+
+            width: calc(100% - 4rem);
+            opacity: 1;
+        }
+    }
+}
+
+.logo-text {
+
+    height: 4rem;
+    object-fit: scale-down;
+    padding-left: 4rem;
+}
