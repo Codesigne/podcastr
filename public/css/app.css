@@ -34,6 +34,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   display: inline-block;
+  vertical-align: middle;
 }
 .icon--tracklist-btn {
   height: 4.1rem;
@@ -84,6 +85,16 @@ body {
   min-width: 2.2rem;
   background-image: url("../img/album/checkCircle.png");
 }
+.icon--zap {
+  height: 2.2rem;
+  min-width: 2.2rem;
+  background-image: url("../img/album/zap.png");
+}
+.icon--recent {
+  height: 2.2rem;
+  min-width: 2.2rem;
+  background-image: url("../img/album/recent.png");
+}
 .icon--disc {
   height: 2.7rem;
   min-width: 2.7rem;
@@ -126,7 +137,7 @@ body {
 }
 
 .tag-list {
-  height: 10rem;
+  min-height: 10rem;
   flex-wrap: wrap;
 }
 
@@ -141,6 +152,9 @@ body {
   padding-left: 2.5957972806rem;
   margin-bottom: 0.8rem;
   border: solid 0.1rem rgba(255, 255, 255, 0.2);
+}
+.tag:not([disabled]) {
+  margin-right: 0.6rem;
 }
 .tag--is-active::after {
   content: " ";
@@ -379,6 +393,7 @@ body {
 }
 
 .l-tags {
+  z-index: 1;
   height: 16.3rem;
   max-height: 16.3rem;
   margin-top: 16rem;
@@ -390,6 +405,18 @@ body {
   color: #e6e6e6;
   line-height: 3.1rem;
   margin-bottom: 1.5rem;
+}
+
+.l-more-tags {
+  z-index: 1;
+  top: 22.1rem;
+  padding-left: 9.8rem;
+}
+.l-more-tags .ttl {
+  font-size: 1.8rem;
+  line-height: 2.5rem;
+  margin-bottom: 0.8rem;
+  margin-top: 3.2rem;
 }
 
 .j-track-list--is-open .j-coverimg::before {
@@ -542,23 +569,35 @@ body {
   bottom: -7rem;
 }
 
-.j-queue-list--is-open .current-track .icon--list-queue {
+.j-tabs--is-open .l-tags {
   transition: all 0.3s cubic-bezier(0.4, 0, 1, 1);
-  transform: translateX(0);
-  transition-delay: 0.2s;
+  opacity: 0;
 }
-.j-queue-list--is-close .current-track .icon--list-queue {
-  transition: all 0.3s cubic-bezier(0, 0, 0.2, 1);
-  transform: translateX(10rem);
-}
-.j-queue-list--is-open .current-track .icon--more {
-  transition: all 0.3s cubic-bezier(0.4, 0, 1, 1);
-  transform: translateX(15rem);
-}
-.j-queue-list--is-close .current-track .icon--more {
+.j-tabs--is-close .l-tags {
   transition: all 0.3s cubic-bezier(0, 0, 0.2, 1);
   transition-delay: 0.2s;
-  transform: translateX(5rem);
+  opacity: 1;
+}
+
+.j-tabs--is-open .l-albums {
+  transition: all 0.3s cubic-bezier(0.4, 0, 1, 1);
+  opacity: 0;
+}
+.j-tabs--is-close .l-albums {
+  transition: all 0.3s cubic-bezier(0, 0, 0.2, 1);
+  transition-delay: 0.2s;
+  opacity: 1;
+}
+
+.j-tabs--is-open .l-more-tags {
+  transition: all 0.3s cubic-bezier(0.4, 0, 1, 1);
+  transition-delay: 0.3s;
+  opacity: 1;
+}
+.j-tabs--is-close .l-more-tags {
+  transition: all 0.3s cubic-bezier(0, 0, 0.2, 1);
+  opacity: 0;
+  top: 100%;
 }
 
 .semi-bold {

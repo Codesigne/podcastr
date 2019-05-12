@@ -11,6 +11,7 @@ $bottom-nav-ico-size : 2.6rem;
     background-repeat: no-repeat;
     background-position: center;
     display: inline-block;
+    vertical-align: middle;
 
     &--tracklist-btn {
         height: 4.1rem;
@@ -80,6 +81,20 @@ $bottom-nav-ico-size : 2.6rem;
         min-width: 2.2rem;
 
         background-image: url("../img/album/checkCircle.png");
+
+    }
+
+    &--zap {
+        height: 2.2rem;
+        min-width: 2.2rem;
+        background-image: url("../img/album/zap.png");
+
+    }
+
+    &--recent {
+        height: 2.2rem;
+        min-width: 2.2rem;
+        background-image: url("../img/album/recent.png");
 
     }
 

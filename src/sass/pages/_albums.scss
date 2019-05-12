@@ -12,9 +12,11 @@
     border: solid 1px transparent;
     // -------------
     transition: width .3s;
-     .is-open & {
-            width: calc(100% + 4rem)
-        }
+
+    .is-open & {
+        width: calc(100% + 4rem)
+    }
+
     .is-open & {
         input {
             height: calc(4rem - 2px);
@@ -48,9 +50,8 @@
         @extend %gardient--1;
     }
 
-   
-}
 
+}
 
 .l-albums {
     overflow: scroll;
@@ -60,16 +61,41 @@
         height: 36.7rem
     }
 }
-.l-tags{
+
+.l-tags {
+    z-index: 1;
     height: 16.3rem;
     max-height: 16.3rem;
     margin-top: 16rem;
     padding-bottom: 2.5rem;
-    .ttl{
+
+    .ttl {
         font-size: 2.3rem;
         font-weight: 800;
         color: rgb(230, 230, 230);
         line-height: 3.1rem;
         margin-bottom: 1.5rem;
+    }
+}
+
+.l-more-tags {
+    z-index: 1;
+    top: 22.1rem;
+        // opacity: 0;
+
+    // padding-left: 12.6rem;
+    padding-left:9.8rem;
+    // left: -100%;
+    //   -webkit-transform: rotateY(-180deg);
+    //         transform: rotateY(-180deg);
+    // -webkit-transform-origin: right;
+    //         transform-origin: right;
+
+    .ttl {
+        font-size: 1.8rem;
+        line-height: 2.5rem;
+        margin-bottom: $kernning * 2 ;
+        margin-top: $kernning * 8 ;
+  
     }
 }
