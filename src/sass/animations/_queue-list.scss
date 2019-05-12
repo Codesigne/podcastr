@@ -15,14 +15,16 @@
     .j-queue-list--is-open & {
         transition: $transition_in;
 
-        top: calc(100% - (81.2rem - 22rem));
+        // top: calc(100% - (81.2rem - 22rem));
+        top: calc(100% - (81.2rem - 21rem));
     }
 }
 
 .j-controles {
     .j-queue-list--is-open & {
         transition: $transition_in;
-        top: calc(100% - (81.2rem - 22rem));
+        // top: calc(100% - (81.2rem - 22rem));
+        top: calc(100% - (81.2rem - 19.4rem));
     }
 
     .j-queue-list--is-close & {
@@ -34,7 +36,8 @@
     .j-queue-list--is-open & {
         transition: $transition_in;
         width: 100%;
-        height: calc(26rem);
+        // height: calc(26rem);
+        height: calc(24.4rem);
         // height: calc(100vh - 22rem );
 
     }
@@ -63,7 +66,9 @@
 .j-queue-list {
     .j-queue-list--is-open & {
         transition: $transition_in;
-        top: calc(100% - (81.2rem - 38rem));
+        // top: calc(100% - (81.2rem - 38rem));
+        top: calc(100% - (81.2rem - 36.2rem));
+        
     }
 
     .j-queue-list--is-close & {
