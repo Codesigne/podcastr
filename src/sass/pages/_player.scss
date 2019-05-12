@@ -42,9 +42,9 @@
     padding-top: 5rem;
     // padding-left: 3rem;
 
-    img{
+    img {
         // transition: $transition_in;
-        
+
         // transform: translateX( 4rem * 3.14  );
     }
 }
@@ -87,6 +87,8 @@
 }
 
 .seekbar--container {
+    padding-top: .25rem;
+
     .time {
         font-size: 1.2rem;
 
@@ -97,14 +99,31 @@
 
 }
 
+.seekbar {
+    height: 1rem;
+
+    &--container {
+        height: 4.5rem;
+    }
+}
+
+.seekbar-negative {
+    @extend %gardient--1;
+}
+
+.seekbar-positive {
+    background-color: rgba(255, 255, 255, .2) !important;
+}
+
+
 .now-playing {
     font-size: 1.2rem;
     height: 3rem;
     line-height: 3rem;
     background-color: rgba($c-3, .57);
-    padding-left: 4rem;
-    padding-right: 2rem;
-    margin-bottom: 1.2rem;
+    padding-left: 3.5rem;
+    padding-right: 1.5rem;
+    margin-bottom: 1.7rem;
     color: $c-2;
 
 }
@@ -116,19 +135,24 @@
 }
 
 .current-track {
+
     .ttl-1 {
         font-size: 1.8rem;
+        margin-bottom: .5rem;
+        line-height: 2.5rem;
     }
 
     .ttl-2 {
         font-size: 1.4rem;
         color: transparentize(#fff, .5);
+
     }
 }
 
 .l-track-list {
-    top: calc(100% - 34.8rem);
-    height: 7rem;
+    top: calc(100% - 37.2rem);
+
+    height: 8rem;
     overflow: hidden;
 
     &.is-open {
@@ -138,13 +162,7 @@
 
 }
 
-.seekbar {
-    height: 1rem;
 
-    &--container {
-        height: 4rem;
-    }
-}
 
 .l-queue-list {
     top: calc(100% - 17rem);
@@ -153,7 +171,8 @@
 }
 
 .l-controles {
-    top: calc(100% - 31.3rem)
+    // top: calc(100% - 31.3rem);
+    top: calc(100% - 33.2rem);
 }
 
 .is-open {
@@ -175,8 +194,3 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-
-.seekbar-negative {
-    @extend %gardient--1; 
-}
-

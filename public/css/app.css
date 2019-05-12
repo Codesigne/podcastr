@@ -336,17 +336,31 @@ body.j-tabs--is-open:after {
   width: inherit;
 }
 
+.seekbar--container {
+  padding-top: 0.25rem;
+}
 .seekbar--container .time {
   font-size: 1.2rem;
 }
+.seekbar {
+  height: 1rem;
+}
+.seekbar--container {
+  height: 4.5rem;
+}
+
+.seekbar-positive {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+}
+
 .now-playing {
   font-size: 1.2rem;
   height: 3rem;
   line-height: 3rem;
   background-color: rgba(44, 40, 56, 0.57);
-  padding-left: 4rem;
-  padding-right: 2rem;
-  margin-bottom: 1.2rem;
+  padding-left: 3.5rem;
+  padding-right: 1.5rem;
+  margin-bottom: 1.7rem;
   color: #50e3c2;
 }
 
@@ -358,6 +372,8 @@ body.j-tabs--is-open:after {
 
 .current-track .ttl-1 {
   font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  line-height: 2.5rem;
 }
 .current-track .ttl-2 {
   font-size: 1.4rem;
@@ -365,20 +381,13 @@ body.j-tabs--is-open:after {
 }
 
 .l-track-list {
-  top: calc(100% - 34.8rem);
-  height: 7rem;
+  top: calc(100% - 37.2rem);
+  height: 8rem;
   overflow: hidden;
 }
 .l-track-list.is-open {
   height: 100%;
   top: calc(81.7rem - 69.3rem);
-}
-
-.seekbar {
-  height: 1rem;
-}
-.seekbar--container {
-  height: 4rem;
 }
 
 .l-queue-list {
@@ -387,7 +396,7 @@ body.j-tabs--is-open:after {
 }
 
 .l-controles {
-  top: calc(100% - 31.3rem);
+  top: calc(100% - 33.2rem);
 }
 
 .is-open {
@@ -495,7 +504,7 @@ body.j-tabs--is-open:after {
 }
 .j-queue-list--is-close .j-coverimg {
   transition: all 0.3s cubic-bezier(0, 0, 0.2, 1);
-  height: calc(100vh - 27.3rem);
+  height: calc(100vh - 29.1rem);
   width: 100%;
 }
 
@@ -536,7 +545,7 @@ body.j-tabs--is-open:after {
 }
 .j-queue-list--is-close .now-playing {
   transition: all 0.3s cubic-bezier(0, 0, 0.2, 1);
-  border-radius: 0 15.5rem 15.5rem 0;
+  border-radius: 0 15rem 15rem 0;
 }
 
 .j-queue-list--is-open .seekbar--container {
