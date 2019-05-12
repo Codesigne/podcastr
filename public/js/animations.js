@@ -36,3 +36,15 @@ $('.j-queue-btn').on('click', function(event) {
         $('.j-queue-list, .j-coverimg').toggleClass('is-open is-close')
     }
 });
+
+$('.tag-list').on('click', '.tag:not([disabled])', function(event) {
+    event.preventDefault();
+    /* Act on the event */
+    $(this).toggleClass('tag--is-active semi-bold');
+});
+
+$('.j-select-album').on('click', function(event) {
+    event.preventDefault();
+    /* Act on the event */
+    $(this).toggleClass('icon--add icon--added');
+});

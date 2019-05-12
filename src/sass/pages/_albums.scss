@@ -1,4 +1,3 @@
-
 .search-bar {
     height: 4rem;
     width: 4rem;
@@ -44,18 +43,7 @@
         /* !importanté */
         border-radius: inherit;
         /* !importanté */
-        background: linear-gradient(to right, red, orange);
-        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#c036d0+0,cf167f+50,ffbf99+100 */
-        background: rgb(192, 54, 208);
-        /* Old browsers */
-        background: -moz-linear-gradient(top, rgba(192, 54, 208, 1) 0%, rgba(207, 22, 127, 1) 50%, rgba(255, 191, 153, 1) 100%);
-        /* FF3.6-15 */
-        background: -webkit-linear-gradient(top, rgba(192, 54, 208, 1) 0%, rgba(207, 22, 127, 1) 50%, rgba(255, 191, 153, 1) 100%);
-        /* Chrome10-25,Safari5.1-6 */
-        background: linear-gradient(to bottom, rgba(192, 54, 208, 1) 0%, rgba(207, 22, 127, 1) 50%, rgba(255, 191, 153, 1) 100%);
-        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#c036d0', endColorstr='#ffbf99', GradientType=0);
-        /* IE6-9 */
+        @extend %gardient--1;
     }
 
     &.is-open {
@@ -63,22 +51,12 @@
     }
 }
 
-.album {
-    // height: 50px;
-    // width: 50px;
-    background-image: url(../img/album/album_bg.png);
-    background-repeat: no-repeat;
-    background-position: 100% 50%;
 
-    &__body {
-        height: 139px;
-    }
+.l-albums {
+    overflow: scroll;
 
-    &__cover {}
-
-    &__title {}
-
-    &__ep {
-        color: #fff;
+    >div {
+        padding: 0 1.8rem;
+        height: 36.7rem
     }
 }

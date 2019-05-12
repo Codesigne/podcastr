@@ -1,3 +1,10 @@
+$bottom-nav-ico-size : 2.6rem;
+
+%bottom-nav-ico-size {
+    height: $bottom-nav-ico-size;
+    width: $bottom-nav-ico-size;
+}
+
 .icon {
     min-height: 2rem;
     min-width: 2rem;
@@ -56,25 +63,25 @@
         background-image: url("../img/search.png");
     }
 
-    &--grid {
-        background-image: url("../img/combinedShape2.png");
+
+
+    &--add {
+        height: 2.2rem;
+
+        min-width: 2.2rem;
+
+        background-image: url("../img/album/plusCircle.png");
+
     }
 
-    &--headphone {
-        background-image: url("../img/podcasts.png");
+    &--added {
+        height: 2.2rem;
+
+        min-width: 2.2rem;
+
+        background-image: url("../img/album/checkCircle.png");
+
     }
-
-    &--download {
-        background-image: url("../img/artists.png");
-    }
-
-    &--user {
-        background-image: url("../img/artistsCopy.png");
-    }
-
-    &--add {}
-
-    &--added {}
 
     &--disc {
         height: 2.7rem;
@@ -116,4 +123,37 @@
         background-image: url("../img/control/repeat.png");
     }
 
+
+    // bottom nav
+    // $bottom-nav-ico-size :22rem;
+
+
+
+    &--grid {
+        @extend %bottom-nav-ico-size;
+        background-image: url("../img/combinedShape2.png");
+    }
+
+    &--headphone {
+        @extend %bottom-nav-ico-size;
+        background-image: url("../img/podcasts.png");
+    }
+
+    &--download {
+        @extend %bottom-nav-ico-size;
+        background-image: url("../img/artists.png");
+    }
+
+    &--user {
+        @extend %bottom-nav-ico-size;
+        background-image: url("../img/artistsCopy.png");
+    }
+
 }
+
+
+
+// %gardient--1 {
+//     height: 22rem;
+//     width: 22rem;
+// }

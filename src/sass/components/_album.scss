@@ -1,0 +1,45 @@
+.album {
+    width: 18.1rem;
+    &__body {
+        height: 13.9rem;
+        background-image: url(../img/album/album_bg.png);
+        background-repeat: no-repeat;
+        background-position: 5rem 50%;
+    }
+
+    &__footer {
+        padding-right: 3.2rem;
+    }
+
+    &__cover {
+        img {
+            border-radius: 1rem;
+            box-shadow: 0 .9rem 1rem fade-out(#000, .7);
+        }
+    }
+
+    &__title {
+        min-height: 3.4rem;
+        font-size: 1.2rem;
+        color: rgb(230, 230, 230);
+
+    }
+
+    &__ep {
+        width: 2.4rem;
+        height: 2.4rem;
+        margin-left: 1.8rem;
+        margin-right: auto;
+        font-size: 1.4rem;
+        line-height: 1.2rem;
+        &:after {
+            content: "EP";
+            position: absolute;
+            color: #fff;
+            font-size: 1rem;
+            line-height: 1.2rem;
+            bottom: 0;
+            left: 0;
+        }
+    }
+}

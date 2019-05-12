@@ -14,103 +14,145 @@
 </head>
 
 <body>
-    <div class="container" style="height: 100vh">
-        <div class="d-flex flex-column h-100 justify-content-between">
-            <!--  ------------------------------------------------------------------
+
+    <body class="j-track-list--is-close j-queue-list--is-close">
+        <div class="h-100">
+            <div class="d-flex flex-column h-100 ">
+                <!--  ------------------------------------------------------------------
               Search bar
             ------------------------------------------------------------------   -->
-            <header>
-                <div class="search-bar float-right">
-                    <input type="text" class="bg-transparent border-0" placeholder="Search for Songs, Artists, Genres">
-                    <i class="icon icon--search float-right j-search "></i>
-                </div>
-            </header>
-            <!--  -----------------------------------------------------------   -->
-            <div class="list list--1">
-                <div class="list__item"> <i class="d-inline-block icon icon--grid"></i>
-                    <div></div>
-                </div>
-                <div class="list__item"></div>
-                <!-- <div class="controles">
-                    <div class="d-flex text-center w-100 justify-content-between align-items-center px-4">
-                         <a href="#" class="p-2"><i class="d-inline-block icon icon--shuffle"></i></a>
-                         <a href="#" class="p-2"><i class="d-inline-block icon icon--prev"></i></a>
-                         <a href="#" class="p-2"><i class="d-inline-block icon icon--pause"></i></a>
-                         <a href="#" class="p-2"><i class="d-inline-block icon icon--fast-forward"></i></a>
-                         <a href="#" class="p-2"><i class="d-inline-block icon icon--repeat"></i></a>
+                <header>
+                    <div class="search-bar float-right">
+                        <input type="text" class="bg-transparent border-0" placeholder="Search for Songs, Artists, Genres">
+                        <i class="icon icon--search float-right j-search "></i>
                     </div>
-                    k
-                </div> -->
-            </div>
-            <!--  -->
-            <div class="row">
-                <div class="col">
-                    <div class="album d-flex justify-content-center">
-                        <div class="album__body d-flex">
-                            <div class="album__cover">
-                                <img src="img/album/group.png" alt="">
+                </header>
+                <div>
+                    <div class="tag-list d-flex">
+                        <div class="tag tag--is-active d-inline-block semi-bold">EDM</div>
+                        <div class="tag d-inline-block semi-bold">ROCK/RETRO</div>
+                        <div class="tag d-inline-block semi-bold">PROGRESIVE</div>
+                        <div class="tag d-inline-block semi-bold">RNB</div>
+                        <div class="tag d-inline-block semi-bold text--c-2" disabled>+ More</div>
+                    </div>
+                </div>
+                <!--  -----------------------------------------------------------   -->
+                <!--  -->
+                <div class="l-albums">
+                    <div class="d-flex flex-column flex-wrap justify-content-between" >
+                        <div class="album d-flex flex-column">
+                            <div class="album__body d-flex w-100 justify-content-between">
+                                <div class="album__cover">
+                                    <img src="img/album/group.png" alt="">
+                                </div>
+                                <div class="album__ep align-self-center text--c-2 position-relative">123</div>
                             </div>
-                            <div class="album__ep align-self-center">123</div>
-                        </div>
-                        <div class="album__title"></div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="album d-flex justify-content-center">
-                        <div class="album__body d-flex">
-                            <div class="album__cover">
-                                <img src="img/album/group.png" alt="">
+                            <div class="album__footer d-flex justify-content-between">
+                                <div class="album__title">
+                                    1 Hardwell On Air:
+                                    Official Podcast
+                                </div>
+                                <i class="icon j-select-album icon--added align-self-center"></i>
                             </div>
-                            <div class="album__ep align-self-center"> 123</div>
                         </div>
-                        <div class="album__title"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <div class="album d-flex justify-content-center">
-                        <div class="album__body d-flex">
-                            <div class="album__cover">
-                                <img src="img/album/group.png" alt="">
+                        <div class="album d-flex flex-column">
+                            <div class="album__body d-flex w-100 justify-content-between">
+                                <div class="album__cover">
+                                    <img src="img/album/group.png" alt="">
+                                </div>
+                                <div class="album__ep align-self-center text--c-2 position-relative">123</div>
                             </div>
-                            <div class="album__ep align-self-center">123</div>
-                        </div>
-                        <div class="album__title"></div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="album d-flex justify-content-center">
-                        <div class="album__body d-flex">
-                            <div class="album__cover">
-                                <img src="img/album/group.png" alt="">
+                            <div class="album__footer d-flex justify-content-between">
+                                <div class="album__title">
+                                    2 Martin Garrix Show
+                                    #147 </div>
+                                <i class="icon j-select-album icon--add align-self-center"></i>
                             </div>
-                            <div class="album__ep align-self-center"> 123</div>
                         </div>
-                        <div class="album__title"></div>
+                        <div class="album d-flex flex-column">
+                            <div class="album__body d-flex w-100 justify-content-between">
+                                <div class="album__cover">
+                                    <img src="img/album/group.png" alt="">
+                                </div>
+                                <div class="album__ep align-self-center text--c-2 position-relative">123</div>
+                            </div>
+                            <div class="album__footer d-flex justify-content-between">
+                                <div class="album__title">
+                                    3 Martin Garrix Show
+                                    #147 </div>
+                                <i class="icon j-select-album icon--add align-self-center"></i>
+                            </div>
+                        </div>
+                        <div class="album d-flex flex-column">
+                            <div class="album__body d-flex w-100 justify-content-between">
+                                <div class="album__cover">
+                                    <img src="img/album/group.png" alt="">
+                                </div>
+                                <div class="album__ep align-self-center text--c-2 position-relative">123</div>
+                            </div>
+                            <div class="album__footer d-flex justify-content-between">
+                                <div class="album__title">
+                                    1 Hardwell On Air:
+                                    Official Podcast
+                                </div>
+                                <i class="icon j-select-album icon--added align-self-center"></i>
+                            </div>
+                        </div>
+                        <div class="album d-flex flex-column">
+                            <div class="album__body d-flex w-100 justify-content-between">
+                                <div class="album__cover">
+                                    <img src="img/album/group.png" alt="">
+                                </div>
+                                <div class="album__ep align-self-center text--c-2 position-relative">123</div>
+                            </div>
+                            <div class="album__footer d-flex justify-content-between">
+                                <div class="album__title">
+                                    2 Martin Garrix Show
+                                    #147 </div>
+                                <i class="icon j-select-album icon--add align-self-center"></i>
+                            </div>
+                        </div>
+                        <div class="album d-flex flex-column">
+                            <div class="album__body d-flex w-100 justify-content-between">
+                                <div class="album__cover">
+                                    <img src="img/album/group.png" alt="">
+                                </div>
+                                <div class="album__ep align-self-center text--c-2 position-relative">123</div>
+                            </div>
+                            <div class="album__footer d-flex justify-content-between">
+                                <div class="album__title">
+                                    3 Martin Garrix Show
+                                    #147 </div>
+                                <i class="icon j-select-album icon--add align-self-center"></i>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <!--  ------------------------------------------------------------------
+                <!--  ------------------------------------------------------------------
               Bottom Menu
             ------------------------------------------------------------------   -->
-            <div class="row text-center">
-                <div class="col"> <i class="d-inline-block icon icon--grid"></i></div>
-                <div class="col"> <i class="d-inline-block icon icon--headphone"></i></div>
-                <div class="col"> <i class="d-inline-block icon icon--download"></i></div>
-                <div class="col"> <i class="d-inline-block icon icon--user"></i></div>
+                <div class="btn-block text-center pt-4 position-absolute" style="bottom: 3.4rem">
+                    <!-- <div class="row clearfix"> -->
+                    <!-- <div class="col"> -->
+                    <div class="d-flex w-100 justify-content-around text-center">
+                        <i class="d-inline-block icon icon--grid"></i>
+                        <i class="d-inline-block icon icon--headphone"></i>
+                        <i class="d-inline-block icon icon--download"></i>
+                        <i class="d-inline-block icon icon--user"></i>
+                    </div>
+                    <!-- </div> -->
+                    <!-- </div> -->
+                </div>
+                <!--  -----------------------------------------------------------   -->
             </div>
-            <!--  -----------------------------------------------------------   -->
         </div>
-    </div>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script> -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script src="js/app.js"></script>
-    <script src="js/animations.js"></script>
-    
-</body>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script> -->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/animations.js"></script>
+    </body>
 
 </html>

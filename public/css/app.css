@@ -1,4 +1,37 @@
 @charset "UTF-8";
+html {
+  font-size: 10px;
+}
+
+body {
+  background: #2c2838;
+  box-sizing: border-box;
+  background-image: url("../img/logoOverlay.png");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: right top;
+  color: #fff;
+  height: 100vh;
+  /* Fallback for browsers that do not support Custom Properties */
+  height: calc(var(--vh, 1vh) * 100);
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+}
+
+header {
+  padding-top: 5rem;
+}
+
+.container {
+  padding-right: 2.8rem;
+  padding-left: 2.8rem;
+}
+
+.icon--user, .icon--download, .icon--headphone, .icon--grid {
+  height: 2.6rem;
+  width: 2.6rem;
+}
+
 .icon {
   min-height: 2rem;
   min-width: 2rem;
@@ -45,17 +78,15 @@
   width: calc(4rem - 2px);
   background-image: url("../img/search.png");
 }
-.icon--grid {
-  background-image: url("../img/combinedShape2.png");
+.icon--add {
+  height: 2.2rem;
+  min-width: 2.2rem;
+  background-image: url("../img/album/plusCircle.png");
 }
-.icon--headphone {
-  background-image: url("../img/podcasts.png");
-}
-.icon--download {
-  background-image: url("../img/artists.png");
-}
-.icon--user {
-  background-image: url("../img/artistsCopy.png");
+.icon--added {
+  height: 2.2rem;
+  min-width: 2.2rem;
+  background-image: url("../img/album/checkCircle.png");
 }
 .icon--disc {
   height: 2.7rem;
@@ -85,33 +116,85 @@
 .icon--repeat {
   background-image: url("../img/control/repeat.png");
 }
-
-html {
-  font-size: 10px;
+.icon--grid {
+  background-image: url("../img/combinedShape2.png");
+}
+.icon--headphone {
+  background-image: url("../img/podcasts.png");
+}
+.icon--download {
+  background-image: url("../img/artists.png");
+}
+.icon--user {
+  background-image: url("../img/artistsCopy.png");
 }
 
-body {
-  background: #2c2838;
-  box-sizing: border-box;
-  background-image: url("../img/logoOverlay.png");
-  background-attachment: fixed;
+.tag-list {
+  height: 10rem;
+  flex-wrap: wrap;
+}
+
+.tag {
+  height: 4.2rem;
+  min-width: 4.2rem;
+  line-height: 2.8;
+  font-size: 1.4rem;
+  vertical-align: middle;
+  border-radius: 2.1rem;
+  padding-right: 2.1rem;
+  padding-left: 2.5957972806rem;
+  margin-bottom: 0.8rem;
+  border: solid 0.1rem rgba(255, 255, 255, 0.2);
+}
+.tag--is-active::after {
+  content: " ";
+  display: inline-block;
+  position: absolute;
+  height: 0.6rem;
+  width: 0.6rem;
+  border: solid 0.3rem #50e3c2;
+  border-radius: 50%;
+  left: calc(1.2978986403rem - .1rem);
+  top: calc(50% - 0.3rem);
+}
+
+.album {
+  width: 18.1rem;
+}
+.album__body {
+  height: 13.9rem;
+  background-image: url(../img/album/album_bg.png);
   background-repeat: no-repeat;
-  background-position: right top;
+  background-position: 5rem 50%;
+}
+.album__footer {
+  padding-right: 3.2rem;
+}
+.album__cover img {
+  border-radius: 1rem;
+  box-shadow: 0 0.9rem 1rem rgba(0, 0, 0, 0.3);
+}
+.album__title {
+  min-height: 3.4rem;
+  font-size: 1.2rem;
+  color: #e6e6e6;
+}
+.album__ep {
+  width: 2.4rem;
+  height: 2.4rem;
+  margin-left: 1.8rem;
+  margin-right: auto;
+  font-size: 1.4rem;
+  line-height: 1.2rem;
+}
+.album__ep:after {
+  content: "EP";
+  position: absolute;
   color: #fff;
-  height: 100vh;
-  /* Fallback for browsers that do not support Custom Properties */
-  height: calc(var(--vh, 1vh) * 100);
-  overflow: hidden;
-  font-family: "Poppins", sans-serif;
-}
-
-header {
-  padding-top: 5rem;
-}
-
-.container {
-  padding-right: 2.8rem;
-  padding-left: 2.8rem;
+  font-size: 1rem;
+  line-height: 1.2rem;
+  bottom: 0;
+  left: 0;
 }
 
 .list--track__item {
@@ -248,17 +331,6 @@ header {
   -webkit-text-fill-color: transparent;
 }
 
-.seekbar-negative {
-  background: #bf36ff;
-  background: -moz-linear-gradient(left, #bf36ff 0%, #e33c79 50%, #ffbe99 100%);
-  background: -webkit-gradient(left top, right top, color-stop(0%, #bf36ff), color-stop(50%, #e33c79), color-stop(100%, #ffbe99));
-  background: -webkit-linear-gradient(left, #bf36ff 0%, #e33c79 50%, #ffbe99 100%);
-  background: -o-linear-gradient(left, #bf36ff 0%, #e33c79 50%, #ffbe99 100%);
-  background: -ms-linear-gradient(left, #bf36ff 0%, #e33c79 50%, #ffbe99 100%);
-  background: linear-gradient(to right, #bf36ff 0%, #e33c79 50%, #ffbe99 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#bf36ff", endColorstr="#ffbe99", GradientType=1);
-}
-
 .search-bar {
   height: 4rem;
   width: 4rem;
@@ -297,33 +369,17 @@ header {
   /* !importanté */
   border-radius: inherit;
   /* !importanté */
-  background: linear-gradient(to right, red, orange);
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#c036d0+0,cf167f+50,ffbf99+100 */
-  background: #c036d0;
-  /* Old browsers */
-  background: -moz-linear-gradient(top, #c036d0 0%, #cf167f 50%, #ffbf99 100%);
-  /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, #c036d0 0%, #cf167f 50%, #ffbf99 100%);
-  /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, #c036d0 0%, #cf167f 50%, #ffbf99 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#c036d0", endColorstr="#ffbf99", GradientType=0);
-  /* IE6-9 */
 }
 .search-bar.is-open {
   width: calc(100% + 4rem);
 }
 
-.album {
-  background-image: url(../img/album/album_bg.png);
-  background-repeat: no-repeat;
-  background-position: 100% 50%;
+.l-albums {
+  overflow: scroll;
 }
-.album__body {
-  height: 139px;
-}
-.album__ep {
-  color: #fff;
+.l-albums > div {
+  padding: 0 1.8rem;
+  height: 36.7rem;
 }
 
 .j-track-list--is-open .j-coverimg::before {
@@ -486,6 +542,39 @@ header {
 
 .text--c-2 {
   color: #50e3c2;
+}
+
+.tag--is-active::before, .seekbar-negative, .search-bar::before {
+  background: #bf36ff;
+  background: -moz-linear-gradient(left, #bf36ff 0%, #e33c79 50%, #ffbe99 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, #bf36ff), color-stop(50%, #e33c79), color-stop(100%, #ffbe99));
+  background: -webkit-linear-gradient(left, #bf36ff 0%, #e33c79 50%, #ffbe99 100%);
+  background: -o-linear-gradient(left, #bf36ff 0%, #e33c79 50%, #ffbe99 100%);
+  background: -ms-linear-gradient(left, #bf36ff 0%, #e33c79 50%, #ffbe99 100%);
+  background: linear-gradient(to right, #bf36ff 0%, #e33c79 50%, #ffbe99 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#bf36ff", endColorstr="#ffbe99", GradientType=1);
+}
+
+.tag--is-active {
+  position: relative;
+  background: #2c2838;
+  box-sizing: border-box;
+  background-clip: padding-box;
+  /* !importanté */
+  border: solid 0.1rem transparent;
+}
+.tag--is-active::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  margin: -1px;
+  /* !importanté */
+  border-radius: inherit;
+  /* !importanté */
 }
 
 /*# sourceMappingURL=app.css.map */
